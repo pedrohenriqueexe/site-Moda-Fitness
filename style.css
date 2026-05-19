@@ -1,0 +1,439 @@
+/* ==========================================================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #0b0b0b;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================================================
+   HEADER / NAVBAR PRINCIPAL
+   ========================================================================== */
+.navbar {
+    background-color: rgba(17, 17, 17, 0.98);
+    border-bottom: 2px solid #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.highlight {
+    color: #ccff00; /* Verde limão fitness */
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #ccff00;
+}
+
+/* Ícones e Busca */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #151515;
+    border: 1px solid #222;
+    border-radius: 4px;
+    padding: 6px 12px;
+}
+
+.search-box input {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 13px;
+    outline: none;
+    width: 160px;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.search-box button:hover {
+    color: #ccff00;
+}
+
+/* Botão do Carrinho Isolado */
+.navbar .icon {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contador do Carrinho Ajustado Perfeitamente */
+#cart-count {
+    background-color: #ccff00;
+    color: #000;
+    font-size: 10px;
+    font-weight: 900;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* ==========================================================================
+   BANNER DE CATEGORIAS (HERO)
+   ========================================================================== */
+.hero-banner {
+    padding: 40px 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.banner-container {
+    display: flex;
+    gap: 20px;
+}
+
+.banner-card {
+    flex: 1;
+    height: 350px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.banner-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.banner-card:hover img {
+    transform: scale(1.05);
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0.2) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+}
+
+.banner-overlay h2 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   VITRINE DE PRODUTOS DINÂMICOS
+   ========================================================================== */
+.products-section {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 5% 80px 5%;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* Card do Produto Único */
+.product-card {
+    background-color: #111;
+    border: 1px solid #1a1a1a;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: #222;
+}
+
+.product-image {
+    position: relative;
+    height: 320px;
+    background-color: #151515;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tag-promo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #ccff00;
+    color: #000;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Seletor de Tamanhos */
+.size-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.size-selector span {
+    font-size: 12px;
+    color: #666;
+}
+
+.size-btn {
+    background-color: #1a1a1a;
+    border: 1px solid #222;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.size-btn:hover, .size-btn.active {
+    background-color: #ccff00;
+    border-color: #ccff00;
+    color: #000;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.old-price {
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+    text-decoration: line-through;
+    margin-right: 8px;
+}
+
+/* Botão Comprar */
+.btn-add {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* ==========================================================================
+   CARRINHO LATERAL (SIDEBAR)
+   ========================================================================== */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background-color: #111;
+    box-shadow: -5px 0 25px rgba(0,0,0,0.5);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.4s ease;
+}
+
+.cart-sidebar.open {
+    right: 0;
+}
+
+.cart-header {
+    padding: 24px;
+    border-bottom: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h3 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+#close-cart-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cart-items {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.cart-footer {
+    padding: 24px;
+    border-top: 1px solid #222;
+    background-color: #151515;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#cart-total-price {
+    color: #ccff00;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.checkout-btn {
+    width: 100%;
+    background-color: #ccff00;
+    color: #000;
+    border: none;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 800;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.checkout-btn:hover {
+    background-color: #b2df00;
+}
+
+/* Notificação Toast */
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ccff00;
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    z-index: 3000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}

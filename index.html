@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitStyle | Moda Fitness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">FIT<span class="highlight">STYLE</span></a>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active">HOME</a>
+                <a href="#" class="nav-link">FEMININO</a>
+                <a href="#" class="nav-link">MASCULINO</a>
+                <a href="#" class="nav-link">ACESSÓRIOS</a>
+            </nav>
+            
+            <div class="nav-icons">
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar produtos..." id="search-input">
+                    <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                
+                <button class="icon" id="cart-btn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-banner">
+        <div class="banner-container">
+            <div class="banner-card female-card">
+                <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=500" alt="Moda Feminina">
+                <div class="banner-overlay">
+                    <h2>MODA FEMININA</h2>
+                </div>
+            </div>
+            
+            <div class="banner-card male-card">
+                <img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=500" alt="Moda Masculina">
+                <div class="banner-overlay">
+                    <h2>MODA MASCULINA</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <h2 class="section-title">TODOS OS PRODUTOS</h2>
+        
+        <div class="product-grid"></div>
+    </section>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Sua Sacola</h3>
+            <button id="close-cart-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        
+        <div class="cart-items" id="cart-items">
+            </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">R$ 0,00</span>
+            </div>
+            <button class="checkout-btn">FINALIZAR COMPRA</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
